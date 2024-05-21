@@ -1,26 +1,11 @@
-# SIB-Project3
+# SIB-Project 6
 
-#### Project ETL sederhana melakukan migrasi Tabel dari Database Marketplace ke Data Warehouse
+#### Project ETL sederhana melakukan migrasi Tabel dari Database Marketplace ke Data Warehouse menggunakan Hadoop 
 
 ### Background Project 
 
-Tim data analyst membutuhkan tabel untuk membuat dashboard terkait detail order dari data source yang ada di database production `marketplace`, Anda sebagai data engineer di minta untuk membuat script data migrasi dari tabel source tersebut ke data warehouse, sehingga tim data analyst bisa menggunakan table dari data warehouse tanpa membebankan database production marketplace.
+Projek ini merupakan projek lanjutan dari projek ke 3, yaitu mengenai pembuatan batch processing untuk data migrasi. Pada project ini, kita membuat tambahan task untuk membuat tabel data mart yang nantinya akan digunakan oleh data analis untuk membuat dashboard report order setiap bulannya. Proses yang dilakukan tidak boleh lebih dari 1 jam. Oleh karena itu, pada projek ini kita akan menggunakan HDFS agar proses migrasi datanya lebih cepat. 
 
 ### Goal Project
 
-Membuat tabel di data warehouse dengan schema yang sudah ditentukan oleh user (tim data analyst).
-
-### Requirement Kolom
-
-Berikut adalah schema yang dibutuhkan oleh tim data analyst:
-- `order_id` (INT): Not Null
-- `order_date` (DATE): Not Null
-- `user_id` (INT): Not Null
-- `payment_name` (VARCHAR(255))
-- `shipper_name` (VARCHAR(255))
-- `order_price` (INT)
-- `order_discount` (INT)
-- `voucher_name` (VARCHAR(255))
-- `voucher_price` (INT)
-- `order_total` (INT)
-- `rating_status` (VARCHAR(255))
+Membuat tabel data mart `total_orders_based_on_month` dengan kolom berupa `month` dan `total_orders`
